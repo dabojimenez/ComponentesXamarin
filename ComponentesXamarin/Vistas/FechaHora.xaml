@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ComponentesXamarin.Vistas.FechaHora" Title="Fechas">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--(DatePicker), trabajamos con FECHAS-->
+            <!--(Format), dmaos el formato de la fecha en mes, dia y ano-->
+            <!--(DateSelected), creamos un evento cuando hagamos lcick en una de las fechas me seleccione, debemos o podmeos mostrar
+            el rsultado en una varibale o un label, pero deben tener nombre-->
+            <DatePicker x:Name="dtpFecha"
+                        Format="MMMM, dddd, yyyy"
+                        Margin="30, 0, 0, 30"
+                        DateSelected="dtpFecha_DateSelected">
+                
+            </DatePicker>
+            <!--(TimePicker), trabajamos con HORAS-->
+            <!--(PropertyChanged), es un evento para seleccionar la hora -->
+            <TimePicker
+                x:Name="tmpHora"
+                PropertyChanged="tmpHora_PropertyChanged"></TimePicker>
+
+            <Label x:Name="lblResultado" Text="Resultado"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblHora" Text="Hora"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

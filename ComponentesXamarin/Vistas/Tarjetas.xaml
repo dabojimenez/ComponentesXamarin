@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ComponentesXamarin.Vistas.Tarjetas"
+             Title="Tarjetas">
+    <ContentPage.Content>
+        <!--(ScrollView), agregamos la parte de poder scrolear a todo el grid-->
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--encuadramos el grid hijo, en el (frame), para agruparlo, ya que es un decorador que encuadra controles dentro-->
+                <Frame BorderColor="Green" Grid.Row="0" Margin="12" CornerRadius="8" BackgroundColor="Firebrick">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Image Source="tarjetascredito.png" Grid.Row="0" Grid.Column="0" Margin="18" Grid.RowSpan="2"/>
+                        <Label Text="Titulo de este texto" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" TextColor="AliceBlue"/>
+                        <Label Text="Descricion dsadddsdsadgddvas" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Start" VerticalOptions="Start"/>
+                        <!--Con el (stacklayout), los dos botones o lo q este dnetro de este, no pertenecera al grid, pero eso si debemos ubicarlo al (staclayout)-->
+                        <!--(Orientation), cambia la orientacion de como estaran de arriba o hacia abajo (vertical) o de forma de izquierda a derecha (horizontal)-->
+                        <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                            <Button Text="OK" x:Name="btnVolver" Clicked="btnVolver_Clicked"/>
+                            <Button Text="Cancelar"/>
+                        </StackLayout>
+
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="1" Margin="12" CornerRadius="8" BackgroundColor="Firebrick">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Image Source="tarjetascredito.png" Grid.Row="0" Grid.Column="0" Margin="18" Grid.RowSpan="2"/>
+                        <Label Text="Titulo de este texto" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" TextColor="AliceBlue"/>
+                        <Label Text="Descricion dsadddsdsadgddvas" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Start" VerticalOptions="Start"/>
+                        <!--Con el (stacklayout), los dos botones o lo q este dnetro de este, no pertenecera al grid, pero eso si debemos ubicarlo al (staclayout)-->
+                        <!--(Orientation), cambia la orientacion de como estaran de arriba o hacia abajo (vertical) o de forma de izquierda a derecha (horizontal)-->
+                        <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                            <Button Text="OK" x:Name="btnVolver2" Clicked="btnVolver_Clicked"/>
+                            <Button Text="Cancelar"/>
+                        </StackLayout>
+
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="2" Margin="12" CornerRadius="8" BackgroundColor="Firebrick">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Image Source="tarjetascredito.png" Grid.Row="0" Grid.Column="0" Margin="18" Grid.RowSpan="2"/>
+                        <Label Text="Titulo de este texto" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" TextColor="AliceBlue"/>
+                        <Label Text="Descricion dsadddsdsadgddvas" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Start" VerticalOptions="Start"/>
+                        <!--Con el (stacklayout), los dos botones o lo q este dnetro de este, no pertenecera al grid, pero eso si debemos ubicarlo al (staclayout)-->
+                        <!--(Orientation), cambia la orientacion de como estaran de arriba o hacia abajo (vertical) o de forma de izquierda a derecha (horizontal)-->
+                        <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                            <Button Text="OK" x:Name="btnVolver3" Clicked="btnVolver_Clicked"/>
+                            <Button Text="Cancelar"/>
+                        </StackLayout>
+
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="3" Margin="12" CornerRadius="8" BackgroundColor="Firebrick">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Image Source="tarjetascredito.png" Grid.Row="0" Grid.Column="0" Margin="18" Grid.RowSpan="2"/>
+                        <Label Text="Titulo de este texto" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" TextColor="AliceBlue"/>
+                        <Label Text="Descricion dsadddsdsadgddvas" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Start" VerticalOptions="Start"/>
+                        <!--Con el (stacklayout), los dos botones o lo q este dnetro de este, no pertenecera al grid, pero eso si debemos ubicarlo al (staclayout)-->
+                        <!--(Orientation), cambia la orientacion de como estaran de arriba o hacia abajo (vertical) o de forma de izquierda a derecha (horizontal)-->
+                        <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                            <Button Text="OK" x:Name="btnVolver4" Clicked="btnVolver_Clicked"/>
+                            <Button Text="Cancelar"/>
+                        </StackLayout>
+
+                    </Grid>
+                </Frame>
+
+            </Grid>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

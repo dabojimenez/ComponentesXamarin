@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ComponentesXamarin.Vistas.MenuPrincipal"
+             Title="Página Principal">
+    
+    <!--Tipo de organizador en GRID, filas y Columnas-->
+    <Grid>
+        
+        <!--(ColumnDefinitions),AQUI DEFINIMOS LA CNATIDAD DE COLUMNAS, en las que se define el ancho
+        (*), significa que va abarcar todo el spacio que se tenga actualmente, de forma automatica
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        (RowDefinitions), definimos las filas, y estas definen el alto
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        empezamos a agregar los valores o componentes en el grid, en este caso, agregamos el la fila 0, y columna 0
+        (ColumnSpan), es para poder unir, y no obedece el orden, empezara desde el 1, siendo su index, ya no seria 0, sino 1
+        <Button Text="Boton1" Grid.Row="0"
+                Grid.Column="1"/>
+        <Button Text="Boton2" Grid.Row="1" Grid.Column="1"/>
+        (RowSpan), es para poder unir dos filas, y lo msismo no obecedesal index 0 sino al index 1
+        <Button Text="Boton4" Grid.RowSpan="2" Grid.Column="0"/>-->
+
+        <!--<ListView>
+            usamos (ItemsSource), para datos un poco no tan dinamicos
+            <ListView.ItemsSource>
+                --><!--realizarmeos un arreglo, de tipo de dato string--><!--
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>David</x:String>
+                    <x:String>Stalyn</x:String>
+                    <x:String>Andres</x:String>
+                    <x:String>Marcela</x:String>
+                    <x:String>Alex</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>-->
+
+        <!--Toda la estructura es para mostrar datos dinamicos-->
+        <!--(ItemsSource), de donde vamos a sacar la data, y con este atributo debemos indicarle de donde la estamos obteniendo-->
+        <!--(HasUnevenRows), acomoda las filas automaticamente-->
+        <!--(SelectionMode), desabilitamos ese color naranja de seleccion de la lista-->
+        <!--(ItemTapped),cuando colocamos el (SelectionMode), debemos implementar itemtapped, para que el evento lo seleccione-->
+        <ListView ItemsSource="{Binding Comidas}" 
+                  SelectionMode="None"
+                  ItemTapped="ListView_ItemTapped">
+            <!--Usamos (ItemTemplate), para datos dinamicos, por ejemplo de una BD-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--Aqui (ViewCell) podmeos agregar un grid, button ,lo que desearamos, de peferencia agregaremos un grid-->
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="40" />
+                            </Grid.ColumnDefinitions>
+                            <!--<Grid.RowDefinitions>
+                                --><!--Agegamos dos filas--><!--
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            --><!--los (binding), enlaza los datos que queremos mostrar de la parte del backend, como consumir una api rest -->
+                            <!--Importante colocar el nombre tal cual se esta definida en la clase, o variable--><!--
+                            <Button Text="{Binding Nombre}" Grid.Row="0"/>
+                            <Label Text="{Binding Precio}" Grid.Row="1"/>-->
+                            
+                            <!--Colocamos una imagen, usando columnas-->
+                            <!--(Source), de donde vamos a obtener los datos o la imagen, en este caso obtendremos del proyecto de Android-->
+                            <Image Source="{Binding Imagen}" Grid.Column="0" Margin="4"/>
+                            <Label Text="{Binding Nombre}" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center" />
+                            <Image Source="flechacorrecta.png" Grid.Column="2" Margin="8"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <!--(Debemos importar en nuestra proyecto principal, NO EN ANDROID, NO EN IOS, en el PRINCIPAL (XMARIN)), debemos instalar en paquetes nuget
+    la siguiente (Rg.Plugins.Popup), este debe ocnstar en las dependencias-->
+<!--(xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"), importante colocar esta linea para poder usar popup-->
+    <!--Importante cambiar el (ContentPage) lo cambiamos a (popup:PopupPage)-->
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="ComponentesXamarin.Vistas.AlertaN1">
+<!--Las paginas popup, por defecto son transparentes-->
+    <Frame Margin="90, 250" CornerRadius="8">
+        <Grid BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+            <!--(HeightRequest), el tamano de la imagen-->
+            <!--(WidthRequest), el ancho de la imagen-->
+            <Image Margin="26" Source="flechacorrecta.png" HeightRequest="150" WidthRequest="150" Grid.Row="0"/>
+            <Label Text="Soy un mensaje Popup" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1"
+                   FontSize="22" TextColor="Aqua"/>
+            <Button Text="Ok" BackgroundColor="Turquoise" Grid.Row="2" CornerRadius="6" x:Name="btnOk" Clicked="btnOk_Clicked"/>
+        </Grid>
+    </Frame>
+
+</popup:PopupPage>
